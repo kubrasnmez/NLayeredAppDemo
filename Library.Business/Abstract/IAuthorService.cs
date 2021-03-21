@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Library.Business.Abstract
 {
-    public interface IBookService
+    public interface IAuthorService
     {
-        List<Book> GetAll();
-        List<Book> GetBookByCategory(int categoryId);
-        List<Book> GetBooksByBookName(string bookName);
-        void Add(Book book);
+        List<Author> GetAll();
+        void Add(Author author);
     }
 }

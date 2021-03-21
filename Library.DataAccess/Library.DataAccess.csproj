@@ -51,13 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAddressDal.cs" />
+    <Compile Include="Abstract\IAuthorDal.cs" />
     <Compile Include="Abstract\IBookDal.cs" />
+    <Compile Include="Abstract\ICustomerDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IPublisherDal.cs" />
+    <Compile Include="Abstract\IRentalDal.cs" />
     <Compile Include="Concreate\EntityFramework\BookContext.cs" />
+    <Compile Include="Concreate\EntityFramework\EfAddressDal.cs" />
+    <Compile Include="Concreate\EntityFramework\EfAuthorDal.cs" />
     <Compile Include="Concreate\EntityFramework\EfBookDal.cs" />
     <Compile Include="Concreate\EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="Concreate\EntityFramework\EfCustomerDal.cs" />
     <Compile Include="Concreate\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="Concreate\EntityFramework\EfPublisherDal.cs" />
+    <Compile Include="Concreate\EntityFramework\EfRentalDal.cs" />
     <Compile Include="Concreate\NHiberNate\NhBookDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

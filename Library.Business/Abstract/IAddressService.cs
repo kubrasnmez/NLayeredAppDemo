@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Library.Business.Abstract
 {
-    public interface IBookService
+    public interface IAddressService
     {
-        List<Book> GetAll();
-        List<Book> GetBookByCategory(int categoryId);
-        List<Book> GetBooksByBookName(string bookName);
-        void Add(Book book);
+        List<Address> GetAll();
+        void Add(Address address);
+        void Update(Address address);
+        void Delete(Address address); 
     }
 }

@@ -16,6 +16,12 @@ namespace Library.Business.Concreate
         {
             _bookDal = bookDal;
         }
+
+        public void Add(Book book)
+        {
+            _bookDal.Add(book);
+        }
+
         public List<Book> GetAll()
         {
             //business code 

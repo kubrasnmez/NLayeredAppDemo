@@ -41,10 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAddressService.cs" />
+    <Compile Include="Abstract\IAuthorService.cs" />
     <Compile Include="Abstract\IBookService.cs" />
     <Compile Include="Abstract\ICategoryService.cs" />
+    <Compile Include="Abstract\ICustomerService.cs" />
+    <Compile Include="Abstract\IPublisherService.cs" />
+    <Compile Include="Abstract\IRentalService.cs" />
+    <Compile Include="Concreate\AddressManager.cs" />
+    <Compile Include="Concreate\AuthorManager.cs" />
     <Compile Include="Concreate\BookManager.cs" />
     <Compile Include="Concreate\CategoryManager.cs" />
+    <Compile Include="Concreate\CustomerManager.cs" />
+    <Compile Include="Concreate\PublisherManager.cs" />
+    <Compile Include="Concreate\RentalManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
