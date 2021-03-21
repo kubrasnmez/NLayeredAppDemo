@@ -153,6 +153,7 @@ namespace Library.WebFormsUI
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            
             _bookService.Delete(new Book
             {
                 Id = Convert.ToInt32(dgwbook.CurrentRow.Cells[0].Value)

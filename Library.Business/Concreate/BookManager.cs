@@ -1,4 +1,7 @@
-﻿using Library.Business.Abstract;
+﻿using FluentValidation;
+using Library.Business.Abstract;
+using Library.Business.Utilities;
+using Library.Business.ValidationRules.FluentValidation;
 using Library.DataAccess.Abstract;
 using Library.Entities.Concreate;
 using System;
@@ -14,17 +17,19 @@ namespace Library.Business.Concreate
         private IBookDal _bookDal;
         public BookManager(IBookDal bookDal)
         {
+            
             _bookDal = bookDal;
         }
 
         public void Add(Book book)
         {
+            ValidationTool.Validate(new BookValidator(), book);
             _bookDal.Add(book);
         }
 
         public void Delete(Book book)
         {
-            _bookDal.Delete(book);
+                _bookDal.Delete(book);  
         }
 
         public List<Book> GetAll()

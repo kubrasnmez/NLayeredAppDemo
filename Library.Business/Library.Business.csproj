@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.9.5.3\lib\net461\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,6 +59,8 @@
     <Compile Include="Concreate\PublisherManager.cs" />
     <Compile Include="Concreate\RentalManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ValidationTool.cs" />
+    <Compile Include="ValidationRules\FluentValidation\BookValidator.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -67,6 +72,9 @@
       <Project>{439bd07f-24b6-4d16-82fe-f7baee4157e4}</Project>
       <Name>Library.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
