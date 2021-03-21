@@ -97,6 +97,7 @@ namespace Library.WebFormsUI
             this.tbxBookName.Name = "tbxBookName";
             this.tbxBookName.Size = new System.Drawing.Size(164, 22);
             this.tbxBookName.TabIndex = 1;
+            this.tbxBookName.TextChanged += new System.EventHandler(this.tbxBookName_TextChanged);
             // 
             // lblBookName
             // 

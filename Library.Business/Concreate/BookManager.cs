@@ -26,5 +26,10 @@ namespace Library.Business.Concreate
         {
             return _bookDal.GetAll(b => b.CategoryId == categoryId);
         }
+
+        public List<Book> GetBooksByBookName(string bookName)
+        {
+            return _bookDal.GetAll(b => b.Name.ToLower().Contains(bookName.ToLower()));
+        }
     }
 }

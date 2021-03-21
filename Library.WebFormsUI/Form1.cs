@@ -26,7 +26,7 @@ namespace Library.WebFormsUI
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            //LoadBook();
+            LoadBook();
             LoadCategories();
         }
         private void LoadCategories()
@@ -52,6 +52,19 @@ namespace Library.WebFormsUI
             {
 
             }
+        }
+
+        private void tbxBookName_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbxBookName.Text))
+            {
+                dgwbook.DataSource = _bookService.GetBooksByBookName(tbxBookName.Text);
+            }
+            else
+            {
+                LoadBook();
+            }
+            
         }
     }
 }
