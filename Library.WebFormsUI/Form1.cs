@@ -150,5 +150,16 @@ namespace Library.WebFormsUI
             cbxAuthorUpdate.SelectedValue = dgwbook.CurrentRow.Cells[7].Value;
             cbxPublisherUpdate.SelectedValue= dgwbook.CurrentRow.Cells[8].Value;
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            _bookService.Delete(new Book
+            {
+                Id = Convert.ToInt32(dgwbook.CurrentRow.Cells[0].Value)
+
+            });
+            MessageBox.Show("Kitap silindi.");
+            LoadBook();
+        }
     }
 }

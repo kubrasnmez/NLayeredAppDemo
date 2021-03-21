@@ -57,7 +57,7 @@ namespace Library.WebFormsUI
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpRealeseDateUpdate = new System.Windows.Forms.DateTimePicker();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.cbxPublisherUpdate = new System.Windows.Forms.ComboBox();
             this.cbxAuthorUpdate = new System.Windows.Forms.ComboBox();
             this.cbxCategoryUpdate = new System.Windows.Forms.ComboBox();
@@ -152,6 +152,7 @@ namespace Library.WebFormsUI
             // 
             this.gbxBookAdd.Controls.Add(this.dtpRealeseDate);
             this.gbxBookAdd.Controls.Add(this.btnAdd);
+            this.gbxBookAdd.Controls.Add(this.btnRemove);
             this.gbxBookAdd.Controls.Add(this.cbxPublisher);
             this.gbxBookAdd.Controls.Add(this.cbxAuthor);
             this.gbxBookAdd.Controls.Add(this.cbmCategory);
@@ -169,7 +170,7 @@ namespace Library.WebFormsUI
             this.gbxBookAdd.Controls.Add(this.lblBook);
             this.gbxBookAdd.Location = new System.Drawing.Point(12, 305);
             this.gbxBookAdd.Name = "gbxBookAdd";
-            this.gbxBookAdd.Size = new System.Drawing.Size(462, 214);
+            this.gbxBookAdd.Size = new System.Drawing.Size(548, 214);
             this.gbxBookAdd.TabIndex = 3;
             this.gbxBookAdd.TabStop = false;
             this.gbxBookAdd.Text = "Yeni Kitap Ekle";
@@ -183,7 +184,7 @@ namespace Library.WebFormsUI
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(318, 165);
+            this.btnAdd.Location = new System.Drawing.Point(235, 162);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 36);
             this.btnAdd.TabIndex = 4;
@@ -319,7 +320,6 @@ namespace Library.WebFormsUI
             // 
             this.groupBox1.Controls.Add(this.dtpRealeseDateUpdate);
             this.groupBox1.Controls.Add(this.btnUpdate);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.cbxPublisherUpdate);
             this.groupBox1.Controls.Add(this.cbxAuthorUpdate);
             this.groupBox1.Controls.Add(this.cbxCategoryUpdate);
@@ -359,14 +359,15 @@ namespace Library.WebFormsUI
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button3
+            // btnRemove
             // 
-            this.button3.Location = new System.Drawing.Point(235, 201);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 36);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(383, 163);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(79, 36);
+            this.btnRemove.TabIndex = 6;
+            this.btnRemove.Text = "Sil";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // cbxPublisherUpdate
             // 
@@ -548,7 +549,7 @@ namespace Library.WebFormsUI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpRealeseDateUpdate;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.ComboBox cbxPublisherUpdate;
         private System.Windows.Forms.ComboBox cbxAuthorUpdate;
         private System.Windows.Forms.ComboBox cbxCategoryUpdate;

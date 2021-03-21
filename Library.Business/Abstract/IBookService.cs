@@ -14,5 +14,6 @@ namespace Library.Business.Abstract
         List<Book> GetBooksByBookName(string bookName);
         void Add(Book book);
         void Update(Book book);
+        void Delete(Book book);
     }
 }

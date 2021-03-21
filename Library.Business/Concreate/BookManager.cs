@@ -22,6 +22,11 @@ namespace Library.Business.Concreate
             _bookDal.Add(book);
         }
 
+        public void Delete(Book book)
+        {
+            _bookDal.Delete(book);
+        }
+
         public List<Book> GetAll()
         {
             //business code 
