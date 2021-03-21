@@ -37,5 +37,10 @@ namespace Library.Business.Concreate
         {
             return _bookDal.GetAll(b => b.Name.ToLower().Contains(bookName.ToLower()));
         }
+
+        public void Update(Book book)
+        {
+            _bookDal.Update(book);
+        }
     }
 }

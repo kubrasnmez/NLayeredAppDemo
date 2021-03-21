@@ -13,5 +13,6 @@ namespace Library.Business.Abstract
         List<Book> GetBookByCategory(int categoryId);
         List<Book> GetBooksByBookName(string bookName);
         void Add(Book book);
+        void Update(Book book);
     }
 }

@@ -46,18 +46,30 @@ namespace Library.WebFormsUI
             cbmCategory.DataSource = _categoryService.GetAll();
             cbmCategory.DisplayMember = "CategoryName";
             cbmCategory.ValueMember = "Id";
+
+            cbxCategoryUpdate.DataSource = _categoryService.GetAll();
+            cbxCategoryUpdate.DisplayMember = "CategoryName";
+            cbxCategoryUpdate.ValueMember = "Id";
         }
         private void LoadAuthor()
         {
             cbxAuthor.DataSource = _authorService.GetAll();
             cbxAuthor.DisplayMember = "AuthorName";
             cbxAuthor.ValueMember = "Id";
+
+            cbxAuthorUpdate.DataSource = _authorService.GetAll();
+            cbxAuthorUpdate.DisplayMember = "AuthorName";
+            cbxAuthorUpdate.ValueMember = "Id";
         }
         private void LoadPublisher()
         {
             cbxPublisher.DataSource = _publisherService.GetAll();
             cbxPublisher.DisplayMember = "PublisherName";
             cbxPublisher.ValueMember = "Id";
+
+            cbxPublisherUpdate.DataSource = _publisherService.GetAll();
+            cbxPublisherUpdate.DisplayMember = "PublisherName";
+            cbxPublisherUpdate.ValueMember = "Id";
         }
         private void LoadBook()
         {
@@ -104,9 +116,39 @@ namespace Library.WebFormsUI
                 PublisherId = Convert.ToInt32(cbxPublisher.SelectedValue)
 
             }) ;
-            MessageBox.Show("Kitap kaydedildi");
+            MessageBox.Show("Kitap eklendi");
             LoadBook();
              
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _bookService.Update(new Book
+            {
+                Id = Convert.ToInt32(dgwbook.CurrentRow.Cells[0].Value),
+                Name = txtBookNameUpdate.Text,
+                CategoryId = Convert.ToInt32(cbxCategoryUpdate.SelectedValue),
+                Language = tbxLangugeUpdate.Text,
+                NumberOfPages = Convert.ToInt32(tbxPageNumberUpdate.Text),
+                NumberOfPrints = Convert.ToInt32(tbxPrintNumberUpdate.Text),
+                ReleaseDate = Convert.ToDateTime(dtpRealeseDateUpdate.Text),
+                AuthorId = Convert.ToInt32(cbxAuthorUpdate.SelectedValue),
+                PublisherId = Convert.ToInt32(cbxPublisherUpdate.SelectedValue)
+            });
+            MessageBox.Show("Kitap güncellendi");
+            LoadBook();
+        }
+
+        private void dgwbook_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtBookNameUpdate.Text = dgwbook.CurrentRow.Cells[1].Value.ToString();
+            cbxCategoryUpdate.SelectedValue = dgwbook.CurrentRow.Cells[6].Value;
+            tbxLangugeUpdate.Text = dgwbook.CurrentRow.Cells[3].Value.ToString();
+            tbxPageNumberUpdate.Text = dgwbook.CurrentRow.Cells[4].Value.ToString();
+            tbxPrintNumberUpdate.Text = dgwbook.CurrentRow.Cells[5].Value.ToString();
+            dtpRealeseDateUpdate.Value = Convert.ToDateTime(dgwbook.CurrentRow.Cells[2].Value.ToString());
+            cbxAuthorUpdate.SelectedValue = dgwbook.CurrentRow.Cells[7].Value;
+            cbxPublisherUpdate.SelectedValue= dgwbook.CurrentRow.Cells[8].Value;
         }
     }
 }
