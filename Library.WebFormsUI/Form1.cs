@@ -1,5 +1,6 @@
 ﻿using Library.Business.Abstract;
 using Library.Business.Concreate;
+using Library.Business.DependencyResolvers.Ninject;
 using Library.DataAccess.Concreate.EntityFramework;
 using Library.Entities.Concreate;
 using System;
@@ -19,10 +20,10 @@ namespace Library.WebFormsUI
         public Form1()
         {
             InitializeComponent();
-            _bookService = new BookManager(new EfBookDal());
-           _categoryService = new CategoryManager(new EfCategoryDal());
-            _authorService = new AuthorManager(new EfAuthorDal());
-            _publisherService = new PublisherManager(new EfPublisherDal());
+            _bookService = InstanceFactory.GetInstance<IBookService>();
+           _categoryService = InstanceFactory.GetInstance<ICategoryService>();
+            _authorService = InstanceFactory.GetInstance<IAuthorService>();
+            _publisherService = InstanceFactory.GetInstance<IPublisherService>();
         }
         private IBookService _bookService;
         private ICategoryService _categoryService;
