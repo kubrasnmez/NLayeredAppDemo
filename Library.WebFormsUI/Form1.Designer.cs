@@ -31,14 +31,14 @@ namespace Library.WebFormsUI
         {
             this.dgwbook = new System.Windows.Forms.DataGridView();
             this.gbxCategory = new System.Windows.Forms.GroupBox();
-            this.gbxProductName = new System.Windows.Forms.GroupBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
-            this.lblProductName = new System.Windows.Forms.Label();
-            this.tbxProductName = new System.Windows.Forms.TextBox();
+            this.gbxBookName = new System.Windows.Forms.GroupBox();
+            this.tbxBookName = new System.Windows.Forms.TextBox();
+            this.lblBookName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwbook)).BeginInit();
             this.gbxCategory.SuspendLayout();
-            this.gbxProductName.SuspendLayout();
+            this.gbxBookName.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgwbook
@@ -62,17 +62,6 @@ namespace Library.WebFormsUI
             this.gbxCategory.TabStop = false;
             this.gbxCategory.Text = "Kategoriye Göre Ara";
             // 
-            // gbxProductName
-            // 
-            this.gbxProductName.Controls.Add(this.tbxProductName);
-            this.gbxProductName.Controls.Add(this.lblProductName);
-            this.gbxProductName.Location = new System.Drawing.Point(12, 128);
-            this.gbxProductName.Name = "gbxProductName";
-            this.gbxProductName.Size = new System.Drawing.Size(304, 100);
-            this.gbxProductName.TabIndex = 2;
-            this.gbxProductName.TabStop = false;
-            this.gbxProductName.Text = "Ürün Adına Göre Ara";
-            // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
@@ -89,39 +78,51 @@ namespace Library.WebFormsUI
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(164, 24);
             this.cbxCategory.TabIndex = 1;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
-            // lblProductName
+            // gbxBookName
             // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(6, 47);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(75, 17);
-            this.lblProductName.TabIndex = 0;
-            this.lblProductName.Text = "Ürün Adı : ";
+            this.gbxBookName.Controls.Add(this.tbxBookName);
+            this.gbxBookName.Controls.Add(this.lblBookName);
+            this.gbxBookName.Location = new System.Drawing.Point(12, 128);
+            this.gbxBookName.Name = "gbxBookName";
+            this.gbxBookName.Size = new System.Drawing.Size(304, 100);
+            this.gbxBookName.TabIndex = 2;
+            this.gbxBookName.TabStop = false;
+            this.gbxBookName.Text = "Kitap Adına Göre Ara";
             // 
-            // tbxProductName
+            // tbxBookName
             // 
-            this.tbxProductName.Location = new System.Drawing.Point(96, 47);
-            this.tbxProductName.Name = "tbxProductName";
-            this.tbxProductName.Size = new System.Drawing.Size(164, 22);
-            this.tbxProductName.TabIndex = 1;
+            this.tbxBookName.Location = new System.Drawing.Point(96, 47);
+            this.tbxBookName.Name = "tbxBookName";
+            this.tbxBookName.Size = new System.Drawing.Size(164, 22);
+            this.tbxBookName.TabIndex = 1;
+            // 
+            // lblBookName
+            // 
+            this.lblBookName.AutoSize = true;
+            this.lblBookName.Location = new System.Drawing.Point(6, 47);
+            this.lblBookName.Name = "lblBookName";
+            this.lblBookName.Size = new System.Drawing.Size(76, 17);
+            this.lblBookName.TabIndex = 0;
+            this.lblBookName.Text = "Kitap Adı : ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gbxProductName);
+            this.Controls.Add(this.gbxBookName);
             this.Controls.Add(this.gbxCategory);
             this.Controls.Add(this.dgwbook);
             this.Name = "Form1";
-            this.Text = "Ürünler";
+            this.Text = "Kitaplar";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwbook)).EndInit();
             this.gbxCategory.ResumeLayout(false);
             this.gbxCategory.PerformLayout();
-            this.gbxProductName.ResumeLayout(false);
-            this.gbxProductName.PerformLayout();
+            this.gbxBookName.ResumeLayout(false);
+            this.gbxBookName.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -132,9 +133,9 @@ namespace Library.WebFormsUI
         private System.Windows.Forms.GroupBox gbxCategory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.ComboBox cbxCategory;
-        private System.Windows.Forms.GroupBox gbxProductName;
-        private System.Windows.Forms.TextBox tbxProductName;
-        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.GroupBox gbxBookName;
+        private System.Windows.Forms.TextBox tbxBookName;
+        private System.Windows.Forms.Label lblBookName;
     }
 }
 

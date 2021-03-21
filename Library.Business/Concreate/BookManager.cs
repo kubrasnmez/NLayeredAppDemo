@@ -21,5 +21,10 @@ namespace Library.Business.Concreate
             //business code 
             return _bookDal.GetAll();
         }
+
+        public List<Book> GetBookByCategory(int categoryId)
+        {
+            return _bookDal.GetAll(b => b.CategoryId == categoryId);
+        }
     }
 }

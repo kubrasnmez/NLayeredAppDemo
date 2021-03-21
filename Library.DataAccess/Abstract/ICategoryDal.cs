@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Business.Abstract
+namespace Library.DataAccess.Abstract
 {
-    public interface IBookService
+    public interface ICategoryDal : IEntityRepository<Category>
     {
-        List<Book> GetAll();
-        List<Book> GetBookByCategory(int categoryId);
     }
 }

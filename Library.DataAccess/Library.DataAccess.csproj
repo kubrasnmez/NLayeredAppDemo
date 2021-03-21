@@ -53,8 +53,10 @@
   <ItemGroup>
     <Compile Include="Abstract\IBookDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Concreate\EntityFramework\BookContext.cs" />
     <Compile Include="Concreate\EntityFramework\EfBookDal.cs" />
+    <Compile Include="Concreate\EntityFramework\EfCategoryDal.cs" />
     <Compile Include="Concreate\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concreate\NHiberNate\NhBookDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
